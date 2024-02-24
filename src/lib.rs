@@ -747,7 +747,7 @@ impl IElementTrait for Rc<RefCell<Node>> {
                 &RenderOptions {
                     encode_content: true, // no need encode
                     decode_entity: true,
-                    inner_html: true,
+                    inner_html: false,
                     ..Default::default()
                 },
                 false,
