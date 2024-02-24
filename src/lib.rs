@@ -745,10 +745,15 @@ impl IElementTrait for Rc<RefCell<Node>> {
             .borrow()
             .build(
                 &RenderOptions {
+                    minify_spaces: true,
+                    lowercase_tagname: true,
+                    remove_endtag_space: true,
+                    remove_attr_quote: true,
+                    remove_comment: true,
                     encode_content: true, // no need encode
                     decode_entity: true,
-                    inner_html: false,
-                    ..Default::default()
+                    inner_html: true,
+                    always_close_void: true,
                 },
                 false,
             )
