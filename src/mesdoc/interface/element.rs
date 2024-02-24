@@ -301,7 +301,7 @@ pub trait IElementTrait: INodeTrait {
     fn inner_html(&self) -> String;
     fn outer_html(&self) -> String;
 
-     fn raw_html(&self);
+     fn raw_html(&self) -> String;
 
     // append child, insert before
     cfg_feat_insertion! {
