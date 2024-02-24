@@ -745,7 +745,6 @@ impl IElementTrait for Rc<RefCell<Node>> {
             .borrow()
             .build(
                 &RenderOptions {
-                    inner_html: true,
                     encode_content: false, // no need encode
                     ..Default::default()
                 },
